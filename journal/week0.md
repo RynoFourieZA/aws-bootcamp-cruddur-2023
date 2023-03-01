@@ -32,7 +32,13 @@ Another roadblock when wanting to see check if my AWS identy is showing in cli. 
 ### Create a Budget
 
 I created my own Budget for $10, the reason I can not afford any spent more then it. I also created another budget but delete the budget because I did'nt want to have a second one. I also know that you can only create 2 free budget limit anything above the limit will result in a extra fee.
+
 ![image of The Budget Alarm I Created](assets/week-0-budget%20alarm.png)
 
+### Recreate Logical Architecture Design
+
+Creating the logical diagram wasn't difficult but doing research on [AWS Architecture](https://aws.amazon.com/architecture/) helped alot in understanding each piece that fits onto the diagram. 
+
+![Cruddur Logical Design](assets/week-0-aws%20logical%20diagram.png)
 
 ## Homework Challanges
