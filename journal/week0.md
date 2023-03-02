@@ -37,8 +37,8 @@ I created my own Budget for $10, the reason I can not afford any spent more then
 
 ### Recreate Logical Architecture Design
 
-Creating the logical diagram wasn't difficult but doing research on [AWS Architecture](https://aws.amazon.com/architecture/) helped alot in understanding each piece that fits onto the diagram. 
+Creating the [Cruddur Logical Diagram](https://lucid.app/lucidchart/430392ad-2b82-42e9-8fa8-02437482c045/edit?viewport_loc=-79%2C-918%2C2811%2C2129%2C0_0&invitationId=inv_a42737b4-18d0-4a8c-8613-2c468b27e218) wasn't difficult but doing research on [AWS Architecture](https://aws.amazon.com/architecture/) helped alot in understanding each piece that fits onto the diagram. 
 
-![Cruddur Logical Design](assets/week-0-aws%20logical%20diagram.png)
+![Cruddur Logical Design](assets/week-0-aws%20logical%20diagram-update.png)
 
 ## Homework Challanges
