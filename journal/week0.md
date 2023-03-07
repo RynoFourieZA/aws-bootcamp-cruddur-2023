@@ -42,3 +42,11 @@ Creating the [Cruddur Logical Diagram](https://lucid.app/lucidchart/430392ad-2b8
 ![Cruddur Logical Design](assets/week-0-aws%20logical%20diagram-update.png)
 
 ## Homework Challanges
+
+### Recreate Conceptual Design
+
+Here I created the conceptual diagram and did a bit of research and examples of why it is used and how to use it one of the resourches I used is [INTRODUCTION TO CONCEPTUAL DIAGRAMS](https://nespguidebook.com/assessment-framework/conceptual-diagrams/). this made it posible to understand it better below is an image of the concpetual design.
+
+![Cruddur Conceptual Diagram](assets/conceptual%20diagram.jpg)
+
+
