@@ -1,10 +1,10 @@
 import './SigninPage.css';
 import React from "react";
-import { ReactComponent as Logo } from '../components/svg/logo.svg';
+import {ReactComponent as Logo} from '../components/svg/logo.svg';
 import { Link } from "react-router-dom";
 
 // [TODO] Authenication
-import { Auth } from 'aws-amplify';
+import Cookies from 'js-cookie'
 
 export default function SigninPage() {
 
@@ -12,21 +12,16 @@ export default function SigninPage() {
   const [password, setPassword] = React.useState('');
   const [errors, setErrors] = React.useState('');
 
-
   const onsubmit = async (event) => {
-    setErrors('')
     event.preventDefault();
-    Auth.signIn(email, password)
-      .then(user => {
-        localStorage.setItem("access_token", user.signInUserSession.accessToken.jwtToken)
-        window.location.href = "/"
-      }).catch(error => {
-        if (error.code == 'UserNotConfirmedException') {
-          window.location.href = "/confirm"
-        }
-        setErrors(error.message)
-        setErrors("Email and password is incorrect or account doesn't exist")
-      });
+    setErrors('')
+    console.log('onsubmit')
+    if (Cookies.get('user.email') === email && Cookies.get('user.password') === password){
+      Cookies.set('user.logged_in', true)
+      window.location.href = "/"
+    } else {
+      setErrors("Email and password is incorrect or account doesn't exist")
+    }
     return false
   }
 
@@ -38,7 +33,7 @@ export default function SigninPage() {
   }
 
   let el_errors;
-  if (errors) {
+  if (errors){
     el_errors = <div className='errors'>{errors}</div>;
   }
 
@@ -48,7 +43,7 @@ export default function SigninPage() {
         <Logo className='logo' />
       </div>
       <div className='signin-wrapper'>
-        <form
+        <form 
           className='signin_form'
           onSubmit={onsubmit}
         >
@@ -59,7 +54,7 @@ export default function SigninPage() {
               <input
                 type="text"
                 value={email}
-                onChange={email_onchange}
+                onChange={email_onchange} 
               />
             </div>
             <div className='field text_field password'>
@@ -67,7 +62,7 @@ export default function SigninPage() {
               <input
                 type="password"
                 value={password}
-                onChange={password_onchange}
+                onChange={password_onchange} 
               />
             </div>
           </div>
