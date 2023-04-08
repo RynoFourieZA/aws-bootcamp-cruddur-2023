@@ -1,7 +1,7 @@
 .join {
   display: flex;
   flex-direction: column;
-  background: #000;
+  background: var(--fb);
   border-radius: 8px;
   margin-top: 24px;
 }
@@ -39,6 +39,10 @@
   margin-top: 24px;
 }
 
+.join-content a.action:hover {
+  background: rgba(149,0,255,0.9);
+}
+
 .join-content a.subaction {
   color: rgba(149,0,255,1);
   text-align: center;
@@ -47,4 +51,8 @@
   padding: 12px 0px;
   margin-top: 12px;
   font-size: 16px;
+}
+
+.join-content a.subaction:hover {
+  color: rgba(149,0,255,0.9);
 }
